@@ -6,6 +6,7 @@
             
           const vm = this;
           vm.listData   = [];
+          // console.log(vm.listData);
                   
           appService.getInfo()
           .then(function (data){

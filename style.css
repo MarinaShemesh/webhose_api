@@ -8,3 +8,8 @@ html, body {
 
 }
 
+p{
+  line-height:1.2em;
+  height:3.6em;
+  overflow:hidden;
+}

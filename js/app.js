@@ -1,6 +1,6 @@
    (function () {
      'use strict';
 
-      angular.module('femaleApp', []);
+      angular.module('femaleApp', ['ngMaterial']);
 
    })();

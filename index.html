@@ -16,16 +16,43 @@
  
  </md-toolbar>
 
- <div>
+<!--  <div>
 
   
    <md-content flex id="content" ng-repeat="item in ul.listData[0]">
+    <p>{{item.published}}</p>
           <h2>{{item.title}} :</h2> by <h3>{{item.author}}</h3>
           <p> {{item.text}}</p>
-          <a href="{{item.url}}" target='_blank'>Website</
+
+          <a href="{{item.url}}" target='_blank'>Website</>
    </md-content>
 
   
+</div> -->
+
+
+<div ng-cloak >
+  <md-content class="md-padding" layout-xs="column" 
+              layout="row" ng-repeat="item in ul.listData[0]">
+     <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{item.title}}</span>
+            <span class="md-subhead">by {{item.author}}</span>
+            <p>{{item.text}}</p>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media"><img ng-src='{{item.thread.main_image}}'></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>read more</md-button>
+          <md-button> <a href="{{item.url}}" target='_blank'>Website</a> </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </md-content>
 </div>
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-animate/angular-animate.js"></script>
