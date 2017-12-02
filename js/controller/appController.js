@@ -9,7 +9,7 @@
                   
           appService.getInfo()
           .then(function (data){
-           const info = data.data;
+           const info = data.data.posts;
             vm.listData.push(info);
             
             console.log("info:", info);

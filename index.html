@@ -12,19 +12,17 @@
 <!--   Toolbar -->
   <md-toolbar layout="row">
  
-   <h3>News about female artists</h3>
+   <h1>News about female artists</h1>
  
  </md-toolbar>
 
- <div flex layout="row">
+ <div>
 
   
-   <md-content flex id="content" ng-repeat="item in vm.listData">
-          <img ng-src="{{ul.selected.avatar}}" class="avatar"/>
-          <h2>{{ul.selected.first_name}} {{ul.selected.last_name}}</h2>
-          <h3>{{ul.selected.job_title}} <a href="{{ul.selected.link}}" target='_blank'>Website</a></h3>
-          <h4>{{ul.selected.email}}</h4>
-          <p>{{ul.selected.description}}</p>
+   <md-content flex id="content" ng-repeat="item in ul.listData[0]">
+          <h2>{{item.title}} :</h2> by <h3>{{item.author}}</h3>
+          <p> {{item.text}}</p>
+          <a href="{{item.url}}" target='_blank'>Website</
    </md-content>
 
   
